@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/Agiley/flickr.git
+  revision: bae7338938cd2d5206817623cfe7b0d97db73594
+  branch: master
+  specs:
+    agiley-flickr (1.0.14)
+      xml-simple (>= 1.0.12)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -32,10 +40,18 @@ GEM
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    rspec (1.3.1)
+    rspec-rails (1.3.3)
+      rack (>= 1.0.0)
+      rspec (= 1.3.1)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  agiley-flickr!
   heroku
   rails (= 2.3.8)
+  rspec (= 1.3.1)
+  rspec-rails (= 1.3.3)
