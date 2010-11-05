@@ -1,0 +1,17 @@
+<div class="photoset">
+  <div id="thumbs<%= params[:id] %>" class="thumb-container">
+    <div class="logo"></div>
+    <ul class="thumbs noscript">
+      <%- @photoset.photos.each do |p| -%>
+        <li>
+          <a class="thumb" href="<%= p.source("Large") %>">
+            <img src="<%= p.source("Square") %>" />
+          </a>
+        </li>
+      <%- end -%>
+    </ul>
+    <div id="controls<%= params[:id] %>" class="controls"></div>
+  </div>
+
+  <div id="slideshow<%= params[:id] %>" class="slideshow"></div>
+</div>

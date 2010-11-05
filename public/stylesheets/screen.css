@@ -1,0 +1,37 @@
+body { background-color: #dadace; font-family: Verdana,Arial,sans-serif; font-size: 12px; }
+
+.page { width: 960px; margin: 2em auto 0; }
+
+.ui-tabs { background: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  padding: 0; font-size: 1em; }
+.ui-tabs .ui-tabs-nav { background: none; border: none; padding: 0 0 0 400px;
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+.ui-tabs .ui-tabs-panel { background: #fff; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+.ui-tabs .ui-tabs-nav li { -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  top: 0; margin: 0 1em 0 0; background: none; border: none; position: relative; height: 30px; }
+.ui-tabs .ui-tabs-nav li a { color: #533121; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { padding: 0; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a { color: #000; }
+.ui-tabs .ui-tabs-nav li .background { position: absolute; width: 100%; height: 29px; left: -1px;
+  z-index: -1; border: 1px solid #aaa; border-bottom-width: 0; opacity: 0; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected .background { opacity: 1; top: 0; }
+.ui-tabs .ui-tabs-panel { padding: 1.5em; }
+
+.photoset { overflow: hidden; }
+.photoset .thumb-container { float: left; width: 260px; }
+.photoset .thumb-container .thumbs { overflow: hidden; width: 220px; }
+.photoset .thumb-container .thumbs li { float: left; margin: 0 2px 2px 0; }
+.photoset .thumb-container .thumbs li a { float: left; width: 50px; height: 50px; }
+.photoset .thumb-container .thumbs li img { width: 50px; height: 50px; }
+.photoset .thumb-container .controls { overflow: hidden;}
+.photoset .thumb-container .controls .ss-controls { float: left; }
+.photoset .thumb-container .controls .ss-controls a { width: 16px; height: 16px; text-indent: -5000px; display: block;
+  border: 1px solid #cb672b;
+  background: transparent url(/images/jqueryui/ui-icons_cb672b_256x240.png) no-repeat 0 -160px; }
+.photoset .thumb-container .controls .ss-controls a.pause {
+  background-position: -16px -160px; }
+.photoset .thumb-container .logo { width: 260px; height: 300px;
+  background: transparent url(/images/logo.png) no-repeat 0 0; }
+.photoset .slideshow { float: right; width: 660px; height: 434px; text-align: center; }
+/*.photoset .slideshow span { display: block; }*/
+.photoset .slideshow img { max-width: 650px; max-height: 434px; }

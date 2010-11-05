@@ -1,5 +1,5 @@
 APP_CONFIG = {
   :flickr => {
-    :user => "sunshine_district"
+    :url => "http://www.flickr.com/photos/sunshine_district/"
   }
 }
