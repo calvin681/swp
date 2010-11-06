@@ -9,8 +9,8 @@ class Photoset
     @index = i
   end
   
-  def self.all
-    Rails.cache.fetch(PHOTOSET_CACHE_KEY) do
+  def self.all(refresh = false)
+    Rails.cache.fetch(PHOTOSET_CACHE_KEY, :force => refresh) do
       flickr = Flickr::Api.new(APP_KEYS[:flickr])
       user = flickr.find_by_url(APP_CONFIG[:flickr][:url]);
       photosets = []

@@ -10,4 +10,9 @@ class PhotosetsController < ApplicationController
       format.html { render :layout => false }
     end
   end
+  
+  def refresh
+    Photoset.all(true)
+    redirect_to root_path
+  end
 end
