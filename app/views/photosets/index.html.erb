@@ -26,6 +26,7 @@
       load: function(e, ui) {
         var id = $(ui.tab).attr("data-id");
         $("#thumbs"+id).galleriffic({
+          delay: 5000,
           controlsContainerSel: "#controls"+id,
           imageContainerSel: "#slideshow"+id,
           playLinkText: "on",
