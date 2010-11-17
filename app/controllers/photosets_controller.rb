@@ -1,6 +1,8 @@
 class PhotosetsController < ApplicationController
   def index
     @photosets = Photoset.all
+    @home_photoset, @photosets = @photosets.partition { |p| p.title.downcase == "home" }
+    @home_photoset = @home_photoset.first
   end
   
   def show

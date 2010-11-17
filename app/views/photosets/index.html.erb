@@ -11,31 +11,46 @@
   
   <div id="home">
     <div class="photoset">
-      <div class="thumb-container">
+      <div id="thumbshome" class="thumb-container">
         <div class="logo"></div>
+        <ul class="thumbs noscript">
+          <%- @home_photoset.photos.each do |p| -%>
+            <li>
+              <a class="thumb" href="<%= p.source("Large") %>">
+                <img src="<%= p.source("Square") %>" />
+              </a>
+            </li>
+          <%- end -%>
+        </ul>
       </div>
-      <div class="slideshow"></div>
+      <div id="slideshowhome" class="slideshow"></div>
     </div>
   </div>
 </div>
 
 
 <script>
+(function($) {
+  function initializeSlideshow(id) {
+    $("#thumbs"+id).galleriffic({
+      delay: 5000,
+      controlsContainerSel: "#controls"+id,
+      imageContainerSel: "#slideshow"+id,
+      playLinkText: "on",
+      pauseLinkText: "off",
+      renderNavControls: false,
+      autoStart: true
+    });
+  }
+  
   $(function() {
     $("#tabs").tabs({
       load: function(e, ui) {
         var id = $(ui.tab).attr("data-id");
-        $("#thumbs"+id).galleriffic({
-          delay: 5000,
-          controlsContainerSel: "#controls"+id,
-          imageContainerSel: "#slideshow"+id,
-          playLinkText: "on",
-          pauseLinkText: "off",
-          renderNavControls: false,
-          autoStart: true
-        });
+        initializeSlideshow(id);
       }
     });
+    initializeSlideshow("home");
     
     $("#tabs .ui-tabs-nav li").hover(function() {
       $(this).not(".ui-tabs-selected").find(".background").stop().css({ top: 30 }).animate({ top: 0, opacity: 1 }, 400);
@@ -48,4 +63,5 @@
       }
     });
   });
+})(jQuery);
 </script>
