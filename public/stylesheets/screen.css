@@ -32,8 +32,8 @@ body { background-color: #dadace; font-family: Verdana,Arial,sans-serif; font-si
   background-position: -16px -160px; }
 .photoset .thumb-container .logo { width: 260px; height: 300px;
   background: transparent url(/images/logo.png) no-repeat 0 0; }
-.photoset .slideshow { float: right; width: 780px; height: 550px; text-align: center; }
+.photoset .slideshow { float: right; width: 780px; height: 513px; text-align: center; }
 .photoset .slideshow a { text-decoration: none; }
-.photoset .slideshow img { max-width: 770px; max-height: 550px; }
+.photoset .slideshow img { max-width: 770px; max-height: 513px; }
 
 #thumbshome .thumb { display: none; }
