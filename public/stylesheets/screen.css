@@ -1,6 +1,6 @@
 body { background-color: #dadace; font-family: Verdana,Arial,sans-serif; font-size: 12px; }
 
-.page { width: 960px; margin: 2em auto 0; }
+.page { width: 1080px; margin: 2em auto 0; }
 
 .ui-tabs { background: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
   padding: 0; font-size: 1em; }
@@ -32,8 +32,8 @@ body { background-color: #dadace; font-family: Verdana,Arial,sans-serif; font-si
   background-position: -16px -160px; }
 .photoset .thumb-container .logo { width: 260px; height: 300px;
   background: transparent url(/images/logo.png) no-repeat 0 0; }
-.photoset .slideshow { float: right; width: 660px; height: 434px; text-align: center; }
-/*.photoset .slideshow span { display: block; }*/
-.photoset .slideshow img { max-width: 650px; max-height: 434px; }
+.photoset .slideshow { float: right; width: 780px; height: 550px; text-align: center; }
+.photoset .slideshow a { text-decoration: none; }
+.photoset .slideshow img { max-width: 770px; max-height: 550px; }
 
 #thumbshome .thumb { display: none; }
