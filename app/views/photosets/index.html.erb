@@ -1,12 +1,11 @@
 <div id="tabs">
   <ul>
-    <li><div class="background"></div><a href="#home">home</a></li>
-    <%- @photosets.each do |p| -%>
+    <%- @photosets.reverse.each do |p| -%>
       <li>
-        <div class="background"></div>
-        <a href="<%= photoset_path(p) %>" data-id="<%= p.to_s %>"><%= p.title.downcase %></a>
+        <a href="<%= photoset_path(p) %>" data-id="<%= p.to_s %>"><div class="<%= p.title.downcase %>"></div></a>
       </li>
     <%- end -%>
+    <li><a href="#home"><div class="home"></div></a></li>
   </ul>
   
   <div id="home">
@@ -45,6 +44,7 @@
   
   $(function() {
     $("#tabs").tabs({
+      selected: $("#tabs > ul > li").length - 1,
       load: function(e, ui) {
         var id = $(ui.tab).attr("data-id");
         initializeSlideshow(id);
@@ -52,16 +52,6 @@
     });
     initializeSlideshow("home");
     
-    $("#tabs .ui-tabs-nav li").hover(function() {
-      $(this).not(".ui-tabs-selected").find(".background").stop().css({ top: 30 }).animate({ top: 0, opacity: 1 }, 400);
-    }, function() {
-      var $this = $(this);
-      if (!$this.is(".ui-tabs-selected")) {
-        $this.find(".background").stop().animate({ top: 30, opacity: 0 }, 100);
-      } else {
-        $this.find(".background").attr("style", "");
-      }
-    });
   });
 })(jQuery);
 </script>
