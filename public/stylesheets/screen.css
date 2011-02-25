@@ -1,18 +1,16 @@
 body {
-  background: #000 url(/images/bg.jpg) no-repeat 50% 0;
+  background: #333 url(/images/bg.jpg) no-repeat 50% 0;
   font-family: Verdana,Arial,sans-serif;
   font-size: 12px;
 }
 
 .page {
-  width: 770px; margin: 1.5em auto 0;
+  width: 772px; margin: 1.5em auto 0;
   background: transparent url(/images/title.png) no-repeat 0 0;
 }
 .footer {
   color: #ddd; margin-top: 10px;
   text-shadow: rgba(0, 0, 0, 1) -1px -1px 0px;
-/*  text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 0px;*/
-
 }
 
 .ui-tabs { background: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
@@ -52,8 +50,9 @@ body {
 
 .ui-tabs .ui-tabs-panel {
   padding: 10px 10px 70px; background-color: #000;
-  -webkit-box-shadow: #333 0px 4px 10px;
-  -moz-box-shadow: #333 0px 4px 10px;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: #000 0px 4px 20px;
+  -moz-box-shadow: #000 0px 4px 20px;
 }
 
 .ui-tabs .ui-tabs-panel .ps {
