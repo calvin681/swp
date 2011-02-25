@@ -5,24 +5,14 @@
         <a href="<%= photoset_path(p) %>" data-id="<%= p.to_s %>"><div class="<%= p.title.downcase %>"></div></a>
       </li>
     <%- end -%>
-    <li><a href="#home"><div class="home"></div></a></li>
+    <li><a href="#ps-home"><div class="home"></div></a></li>
   </ul>
   
-  <div id="home">
-    <div class="photoset">
-      <div id="thumbshome" class="thumb-container">
-        <div class="logo"></div>
-        <ul class="thumbs noscript">
-          <%- @home_photoset.photos.each do |p| -%>
-            <li>
-              <a class="thumb" href="<%= p.source("Large") %>">
-                <img src="<%= p.source("Square") %>" />
-              </a>
-            </li>
-          <%- end -%>
-        </ul>
-      </div>
-      <div id="slideshowhome" class="slideshow"></div>
+  <div id="ps-home">
+    <div class="ps">
+      <%- @home_photoset.photos.each do |p| -%>
+       <img src="<%= p.source("Large") %>" rel="<%= p.source("Square") %>"></img>
+      <%- end -%>
     </div>
   </div>
 </div>
@@ -31,15 +21,16 @@
 <script>
 (function($) {
   function initializeSlideshow(id) {
-    $("#thumbs"+id).galleriffic({
-      delay: 5000,
-      controlsContainerSel: "#controls"+id,
-      imageContainerSel: "#slideshow"+id,
-      playLinkText: "on",
-      pauseLinkText: "off",
-      renderNavControls: false,
-      autoStart: true
+    $("#ps-"+id+" div.ps").nivoSlider({
+      effect: "sliceUpDown",
+      animSpeed: 1000,
+      pauseTime: 7000,
+      controlNavThumbs: true,
+      controlNavThumbsFromRel: true,
+      pauseOnHover: false,
+      directionNav: false
     });
+    
   }
   
   $(function() {
@@ -51,7 +42,6 @@
       }
     });
     initializeSlideshow("home");
-    
   });
 })(jQuery);
 </script>
