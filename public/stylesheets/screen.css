@@ -57,6 +57,11 @@ body {
   height: 500px;
 }
 
+.ui-tabs .ui-tabs-panel .ps {
+  width: 750px;
+  height: 500px;
+}
+
 .ui-tabs .ui-tabs-panel .ps .nivo-controlNav {
   position: absolute;
   bottom: -60px;
