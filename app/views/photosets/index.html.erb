@@ -9,9 +9,9 @@
   </ul>
   
   <div id="ps-home">
-    <div class="ps">
+    <div class="ps" style="width: 750px;">
       <%- @home_photoset.photos.each do |p| -%>
-       <img src="<%= p.source("Large") %>" rel="<%= p.source("Square") %>"> />
+       <img src="<%= p.source("Large") %>" rel="<%= p.source("Square") %>" />
       <%- end -%>
     </div>
   </div>
